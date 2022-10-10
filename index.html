@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title>Coca-Cola</title>
 </head>
+
 <body>
     <div id="navbar">
         <figure>
@@ -14,11 +20,11 @@
         </figure>
         <!--off canvas - fuera del viewport -->
         <nav>
-            <a href="">Real magic</a>
-            <a href="">Campañas</a>
-            <a href="">Música</a>
-            <a href="">Productos</a>
-            <a href="">Fanstore</a>
+            <a href=""><b>magic</b></a>
+            <a href=""><b>Campañas</b></a>
+            <a href=""><b>Música</b></a>
+            <a href=""><b>Productos</b></a>
+            <a href=""><b>Fanstore</b></a>
         </nav>
         <div id="toggleButton">
             <div class="bar"></div>
@@ -27,23 +33,62 @@
         </div>
     </div>
     <header>
-        <img src="assets/img/coca-cola-logo-1.png" alt="logo">
-        <h2>Christmas Magic</h2>
-        <h4><b>Estamos solo a una Coca-Cola de distancia</b></h4>
+        <img src="assets/img/coca-cola-logo-1.png" class="animate__animated animate__bounce" alt="logo">
+        <h3 class="animate__animated animate__bounce"><b>Christmas Magic</b></h3>
+        <h3 class="animate__animated animate__bounce"><b>Estamos a una Coca-Cola de distancia</b></h3>
     </header>
     <div class="camion"><img src="assets/img/camion.jpg" alt="camioncito"></div>
-    <div class="fixed"><p><strong>¡Merry Christmass!</strong></p></div>
+    <div class="fixed">
+        <p><strong><b>¡Merry Christmass!</b></strong></p>
+    </div>
     <main>
-        <div class="figure1">
+        <!-- se importa bootstrap para las cards alusivas-->
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/img/cards/unidos.jpg" class="card-img-top" alt="Imagen Promocional">
+                    <div class="text-center">
+                        <h5 class="card-title">Hagámoslo juntos</h5>
+                        <p class="card-text">Un mundo más unido es posible, pero aún nos queda mucho camino por
+                            recorrer. El cambio depende de
+                            todos nosotros y no vamos a parar hasta conseguirlo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/img/cards/variedad.jpg" class="card-img-top" alt="Imagen Promocional">
+                    <div class="text-center">
+                        <h5 class="card-title">¿Cuántas variedades hay de Coca-Cola?</h5>
+                        <p class="card-text">Pregúntanos todo lo que quieras saber sobre Coca-Cola</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/img/cards/famiia.jpg" class="card-img-top" alt="Imagen Promocional">
+                    <div class="text-center">
+                        <h5 class="card-title">Es hora de juntarse</h5>
+                        <p class="card-text">Fíjate bien, piensa en la última Navidad que compartiste con tus seres queridos acompañada de una
+                            Coca-Cola. Tal vez, cada vez que la recuerdes, te lleve a sentirte en casa y recordar a alguien
+                            en especial.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <div class="figure1">
         <figure>
             <img src="assets/img/cards/unidos.jpg" alt="Imagen Promocional">
             <figcaption>
                 <h3>Hagámoslo juntos</h3>
-                <p>Un mundo más unido es posible, pero aún nos queda mucho camino por recorrer. El cambio depende de todos nosotros y no vamos a parar hasta conseguirlo.</p>
+                <p>Un mundo más unido es posible, pero aún nos queda mucho camino por recorrer. El cambio depende de
+                    todos nosotros y no vamos a parar hasta conseguirlo.</p>
             </figcaption>
         </figure>
-        </div>
-        <div class="figure2">
+    </div>
+    <div class="figure2">
         <figure>
             <img src="assets/img/cards/variedad.jpg" alt="Imagen Promocional">
             <figcaption>
@@ -51,17 +96,20 @@
                 <p>Pregúntanos todo lo que quieras saber sobre Coca-Cola</p>
             </figcaption>
         </figure>
-        </div>
-        <div class="figure3">
+    </div>
+    <div class="figure3">
         <figure>
             <img src="assets/img/cards/famiia.jpg" alt="Imagen Promocional">
             <figcaption>
                 <h3>Es hora de juntarse</h3>
-                <p>Fíjate bien, piensa en la última Navidad que compartiste con tus seres queridos acompañada de una Coca-Cola. Tal vez, cada vez que la recuerdes, te lleve a sentirte en casa y recordar a alguien en especial.</p>
+                <p>Fíjate bien, piensa en la última Navidad que compartiste con tus seres queridos acompañada de una
+                    Coca-Cola. Tal vez, cada vez que la recuerdes, te lleve a sentirte en casa y recordar a alguien
+                    en especial.</p>
             </figcaption>
         </figure>
-        </div>
-    </main>
+    </div>
+-->
     <script src="js/menu.js"></script>
 </body>
+
 </html>

@@ -1,73 +1,86 @@
-:root{
+:root {
     --color-principal: #ff0000;
     --color-letras: #ffffff;
     --altura-navbar: 60px;
-    --altura-header:var(--altura-header)
+    --altura-header: var(--altura-header)
 }
-html, body{
+
+html,
+body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-#navbar{
+
+#navbar {
     position: sticky;
-    top:0;
-    display:flex;
+    top: 0;
+    display: flex;
     align-items: center;
     background: var(--color-principal);
     height: var(--altura-navbar);
 }
-#navbar > figure {
-    display:flex;
+
+#navbar>figure {
+    display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
 }
-#navbar img{
+
+#navbar img {
     width: 100px;
     margin: 20px;
 }
-#navbar > nav{
-    display:flex;
+
+#navbar>nav {
+    font-size: 22px;
+    display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
     z-index: 4;
 }
-#navbar a{
+
+#navbar a {
     position: relative;
-    display:flex;
+    display: flex;
     flex-direction: column;
     text-decoration: none;
     color: var(--color-letras);
+    color: rgb(11, 250, 75);
+
 }
-#navbar a::before{
+
+#navbar a::before {
     content: "";
     width: 100%;
     height: 2px;
     background-color: rgb(11, 126, 46);
+    background-color: #ffffff;
     transition: all .3s ease;
     position: absolute;
     z-index: -1;
 }
-#navbar a:hover::before{
-    top:0;
+
+#navbar a:hover::before {
+    top: 0;
     height: 100%;
 }
 
-#toggleButton{
-    display:none;
+#toggleButton {
+    display: none;
 }
 
-header{
+header {
     text-transform: uppercase;
     text-align: center;
-    text-shadow:15px 15px 10px green;
-    display:grid; 
-    grid-template-columns: 400px 400px 400px;
-    grid-template-rows: auto auto auto;
+    text-shadow: 15px 15px 10px green;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
     height: 500px;
     width: 100%;
     padding-bottom: 10px;
@@ -76,52 +89,36 @@ header{
     background: url("../assets/img/santaclaus.jpg");
     background-size: cover;
     background-position: center;
-    
-    
+
+
 }
-header img 
-{
+
+header img {
     width: 240px;
     padding-bottom: 20px;
-    grid-area: 3/1/3/2;
     margin-top: 410px;
     margin-left: 40px;
     text-align: center;
 }
 
-header h2
-{
-    grid-area: 3/2/3/3;
-    margin-top: 450px;    
-    text-align: center;
-    width: 300px;
-    margin-left: 60px;
-}
-
-header h4
-{
-    font-size: 1em;
-    grid-area: 3/3/3/span 4;
-    margin-top: 460px;
-    text-align: end;
-    max-width: 400px;
-    margin-left: 40px;
+header h3 {
+    color: #ffffff;
+    font-size: 25px;
 }
 
 
-
-.camion
-{
+.camion {
     display: block;
     margin: 10px;
     border: 10px solid green;
 }
-.camion img
-{
+
+.camion img {
     width: 100%;
 }
-.fixed
-{   height: 200px;
+
+.fixed {
+    height: 200px;
     margin: 10px;
     display: flex;
     justify-content: center;
@@ -131,52 +128,66 @@ header h4
     background-image: url(..//assets/img/fondo.jpg);
     border: 12px solid red;
 }
-.fixed p 
-{
+
+.fixed p {
     padding-top: 20px;
 }
 
 
-main
-{
+main {
     display: grid;
     align-items: baseline;
     grid-template-rows: 200px 200px 200px;
     grid-template-columns: auto auto auto;
 
 }
-main img
-{
-    grid-area: auto;
-    gap:10px;
-    border-top: 5px solid #ff0000;
-    border-left: 5px solid #ff0000;
-    border-right: 5px solid #ff0000;
+
+main img {
+
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 10px;
+    border-top: 3px solid #ff0000;
+    border-left: 3px solid #ff0000;
+    border-right: 3px solid #ff0000;
+
 }
-.figure1
-{
+
+.col{
+    width: 50%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    padding: 5px;
+    width: 30%;
+    height: 70%;
+}
+
+/*
+.figure1 {
     grid-area: 1/1/2/2;
 }
 
-.figure2
-{
+.figure2 {
     height: auto;
     grid-area: 1/2/2/3;
 }
 
-.figure3
-{
+.figure3 {
     object-fit: cover;
     object-position: center;
     grid-area: 1/3/2/4;
 }
 
-figure h3 
-{   text-transform: uppercase;
+figure h3 {
+    text-transform: uppercase;
     text-decoration-line: line-through;
     font-size: 2em;
     color: red;
-    text-shadow: 5px 5px 7px green ;
+    text-shadow: 5px 5px 7px green;
     text-align: center;
     border: 10px solid red;
 }
@@ -184,12 +195,14 @@ figure h3
 figure img {
     width: 100%;
 }
+*/
 /*Cuando el tamaño de la pantalla sea inferior a 860px de ancho*/
 @media (max-width: 860px) {
-    main figure{
-        max-width: 100%;
+    main figure {
+        max-width: 50%;
     }
-    #toggleButton{
+
+    #toggleButton {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -199,24 +212,26 @@ figure img {
         border-radius: 5px;
         margin: 5px;
         background: linear-gradient(145deg, #e60000, #ff0000);
-        box-shadow:  3px 3px 6px #d10000,
-                    -3px -3px 6px #ff0000;
+        box-shadow: 3px 3px 6px #d10000,
+            -3px -3px 6px #ff0000;
     }
-    
-    #toggleButton:hover{
+
+    #toggleButton:hover {
         cursor: pointer;
     }
-    
-    #toggleButton .bar{
+
+    #toggleButton .bar {
         border-radius: 1px;
         width: 80%;
         height: 3px;
-        background-color: white ;
+        background-color: white;
     }
-    #navbar{
+
+    #navbar {
         justify-content: space-between;
     }
-    #navbar > nav{
+
+    #navbar>nav {
         position: fixed;
         right: -100%;
         bottom: 0;
@@ -226,12 +241,35 @@ figure img {
         flex-direction: column;
         transition: all .5s linear;
     }
-    #navbar > nav.active{
+
+    #navbar>nav.active {
         right: 0;
     }
-} 
-    @media print {
-    #navbar{
+
+    header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 25%;
+    }
+
+    header>img {
+        flex-wrap: wrap;
+    }
+
+    /*figure>h3 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    */
+
+}
+
+@media print {
+    #navbar {
         display: none;
     }
 }
